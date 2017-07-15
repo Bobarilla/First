@@ -2,7 +2,6 @@ import random
 
 print("Welcome to AdvTxt")
 
-#global variables
 randomint = 0
 hp = 500
 weapon_power = 1
@@ -120,7 +119,7 @@ while game_on==1:
           items()
     elif occurance>=95:
         print("Found a shop! You can buy stuff. Cause thats what shops do.")
-        buy=input("Type the #id of the item you want to buy and Enter to exit: #1 Heath Potion - Gain 20 health [20], #2 Keychain [80]")
+        buy=input("Type the #id of the item you want to buy and 0 to exit: #1 Heath Potion - Gain 20 health [20], #2 Keychain [80]")
         if buy=="#1" or "1":
             print("Bought Health Potion for 20 gold. Your hp is now " +str(hp)+ " and you have " +str(gold)+ " gold.")
             gold-=20
@@ -128,9 +127,10 @@ while game_on==1:
         elif buy=="#2" or "2":
             print("Bought a useless keychain like a dumb toursit. You have " +str(gold)+ " gold")
             gold-=80
-       #broken
-        else:
+        elif buy==0:
             print("have a nice day")
+        else:
+            print()
     else:
         print("ran an else for items")
    
